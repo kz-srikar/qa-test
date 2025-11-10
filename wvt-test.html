@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kwanzoo Embed Script Test</title>
+</head>
+<body>
+  <h1>Kwanzoo Embed Script Test Page</h1>
+  <p>If the script loads successfully, any ad or widget content from Kwanzoo should appear below this line.</p>
+  
+  <div id="kwanzoo-test-container"></div>
+
+  <!-- Your embed script -->
+  <script src="https://ads.qa.kwanzoo.com/embed-code/12864"></script>
+
+  <!-- Optional: Add console feedback -->
+  <script>
+    window.addEventListener('load', () => {
+      console.log('Test page loaded. Kwanzoo script should be executed now.');
+    });
+  </script>
+</body>
+</html>

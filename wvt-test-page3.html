@@ -12,7 +12,26 @@
   <div id="kwanzoo-test-container"></div>
 
   <!-- Your embed script -->
-  <script src="https://ads-qa.kwanzoo.com/embed-code/12864"></script>
+  <!-- Kwanzoo Analytics Tracking Code -->
+  <script>
+  (function(w,d,s,id){
+    w.KwanzooSDK=w.KwanzooSDK||{_queue:[],
+      addCustomParams:function(p){this._queue.push(['addCustomParams',p])},
+      call:function(e,d){this._queue.push(['call',e,d])}
+    };
+    var f=d.getElementsByTagName(s)[0],j=d.createElement(s);
+    j.async=1;j.src='https://ads-qa.kwanzoo.com/embed-code/'+id;
+    f.parentNode.insertBefore(j,f);
+  })(window,document,'script','12865');
+  
+  // Optional: Add custom parameters
+  KwanzooSDK.addCustomParams({
+    page3: {
+      "Session id" : "1244",
+	  "Customer id" : "22"
+    }
+  });
+  </script>
 
   <!-- Optional: Add console feedback -->
   <script>

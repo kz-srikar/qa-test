@@ -9,7 +9,7 @@
   <h2>Kwanzoo Signals Data Feed QA Test Page</h2>
   <p>If the script loads correctly, you should see requests being made to <code>qa.kwanzoo.com</code>.</p>
 
- <!-- Kwanzoo Analytics Tracking Code -->
+<!-- Kwanzoo Analytics Tracking Code -->
 <script>
 (function(w,d,s,id){
   w.KwanzooSDK=w.KwanzooSDK||{_queue:[],
@@ -21,14 +21,17 @@
   f.parentNode.insertBefore(j,f);
 })(window,document,'script','12869');
 
-// Optional: Add custom parameters
-KwanzooSDK.addCustomParams({
-  "app1": {
-    "name": "test",
-    "version": "v2"
-  }
-});
+// Randomize app1 value
+(function () {
+  var values = ['test', 'test2', 'test3'];
+  var randomValue = values[Math.floor(Math.random() * values.length)];
+
+  KwanzooSDK.addCustomParams({
+    app1: randomValue
+  });
+})();
 </script>
+
 
 </body>
 </html>
